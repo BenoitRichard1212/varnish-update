@@ -4,5 +4,8 @@
   connection: local
   become: yes
   tasks:
-    - name: Update wp database.
+    - name: Update varnish_caching_homepage_ttl.
       command: mysql --user=root --password=B3nmalign312 test -Ns -e "UPDATE wp_options SET option_value='30' WHERE option_name='varnish_caching_homepage_ttl'"
+      
+    - name: Update varnish_caching_ttl.
+      command: mysql --user=root --password=B3nmalign312 test -Ns -e "UPDATE wp_options SET option_value='30' WHERE option_name='varnish_caching_ttl'"
