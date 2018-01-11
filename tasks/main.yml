@@ -5,4 +5,4 @@
   become: yes
   tasks:
     - name: Update wp database.
-      command: mysql -u root -p B3nmalign312 test -Ns -e "UPDATE wp-options SET varnish_caching_homepage_ttl='30', varnish_caching_ttl='30'"
+      
